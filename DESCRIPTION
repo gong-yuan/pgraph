@@ -1,0 +1,11 @@
+Package: pgraph
+Type: Package
+Title: A general method for creating graphs using projection
+Version: 0.6
+Date: 2016-06-11
+Author: Jianqing Fan, Yang Feng and Lucy Xia
+Maintainer: Yang Feng <yang.feng@columbia.edu>
+Description: A general method for creating graphs using projection
+License: GPL-2
+LazyData: TRUE
+RoxygenNote: 5.0.1
