@@ -14,7 +14,7 @@
 #' \item{roc.lasso}{roc results for lasso}
 #' \item{roc.scad}{roc results for scad}
 #' \item{roc.alasso}{roc results for adaptive lasso}
-
+#' @seealso \code{\link{pgraph}}, \code{\link{roc}}, \code{\link{projcov}}, \code{\link{projcore}}
 greg <- function(z, A, eps = 1e-15, rholist = NULL, gamma = 0.5, trace = FALSE){
  diag(A) = 0 ###true graph has diagonal 0
 # n = nrow(z)

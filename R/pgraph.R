@@ -15,7 +15,7 @@
 #' \item{xeps}{residual of the projection of x}
 #' \item{yeps}{residual of the projection of y}
 #' @seealso \code{\link{greg}}, \code{\link{roc}}, \code{\link{projcov}}, \code{\link{projcore}}
-pgraph<-function(z, f = NULL, method = c("lasso","sam"), cond = TRUE , trace = FALSE){
+pgraph <- function(z, f = NULL, method = c("lasso","sam"), cond = TRUE , trace = FALSE){
  method = match.arg(method)
  p = ncol(z)
  statmat.pearson = matrix(0,p,p)

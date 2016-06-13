@@ -17,7 +17,7 @@
 #' \item{test}{distance covariance test object}
 #' \item{xeps}{residual of the projection of x}
 #' \item{yeps}{residual of the projection of y}
-
+#' @seealso \code{\link{greg}}, \code{\link{roc}}, \code{\link{pgraph}}, \code{\link{projcore}}
 projcov <- function(x, y, b, method = c("lasso","sam")){
   method = match.arg(method)
   if(method == 'lasso'){

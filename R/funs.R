@@ -1,4 +1,4 @@
-cv.samQL<- function(x, y, fold = 5){
+cv.samQL <- function(x, y, fold = 5){
   n = length(y)
   n.fold = ceiling(n/fold); # number of observations in each fold
   set.seed(0)

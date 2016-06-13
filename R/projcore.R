@@ -28,6 +28,7 @@
 #' y = b%*%by+rnorm(n)
 #' fit1 = projcore(x, b, method = "lasso")
 #' fit2 = projcore(y, b, method = "sam")
+#' @seealso \code{\link{greg}}, \code{\link{roc}}, \code{\link{projcov}}, \code{\link{pgraph}}
 projcore <- function(x, b, method = c("lasso","sam")){
   method = match.arg(method)
  # cor = match.arg(cor)
