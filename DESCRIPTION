@@ -5,7 +5,9 @@ Version: 0.6
 Date: 2016-06-11
 Author: Jianqing Fan, Yang Feng and Lucy Xia
 Maintainer: Yang Feng <yang.feng@columbia.edu>
-Description: A general method for creating graphs using projection
+Depends: R (>= 3.0.1)
+Imports: SAM, energy, glasso, glmnet, splines
+Description:  Implements a general framework for creating graphs using projection. Both lasso and sparse additive model projections and implemented. Both Pearson correlation and distance covariance are used to generate the graph.
 License: GPL-2
 LazyData: TRUE
 RoxygenNote: 5.0.1

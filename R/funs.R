@@ -9,12 +9,12 @@ cv.samQL<- function(x, y, fold = 5){
     cind = intersect(1:n, cind)
     test.ind = ind[cind]
     train.ind = setdiff(ind,test.ind)
-    fit = samQL(x[train.ind,],y[train.ind])
+    fit = SAM::samQL(x[train.ind,],y[train.ind])
     ypred = predict(fit, x[test.ind,])
     error = error + apply(ypred$values,2,f<-function(u){sum((u-y[test.ind])^2)})
   }
   lambda.min = which.min(error)
-  sam.fit = samQL(x,y)
+  sam.fit = SAM::samQL(x,y)
   return(list=list(sam.fit=sam.fit,lambda.min=lambda.min,cv.error=error))
 }
 

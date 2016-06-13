@@ -14,22 +14,9 @@
 #' \item{test}{distance covariance test object}
 #' \item{xeps}{residual of the projection of x}
 #' \item{yeps}{residual of the projection of y}
-#' @examples
-#'
-#' p=30;
-#' n=120;
-#' tmp=runif(p-1,0.5,1)
-#' s=c(0,cumsum(tmp));
-#' s1=matrix(s,p,p)
-#' cov.mat.true=exp(-abs(s1-t(s1)))
-#' prec.mat.true=solve(cov.mat.true);
-#' a=matrix(rnorm(p*n),n,p)
-#' data.sa=a%*%chol(cov.mat.true);
-#' fit = pgraph(data.sa)
-#' fit2 = pgraph(data.sa, cor = 'dcov')
-pgraph<-function(z, f = NULL, method = c("ridge","lasso","sam"), cond = TRUE , trace = FALSE){
+#' @seealso \code{\link{greg}}, \code{\link{roc}}, \code{\link{projcov}}, \code{\link{projcore}}
+pgraph<-function(z, f = NULL, method = c("lasso","sam"), cond = TRUE , trace = FALSE){
  method = match.arg(method)
- n = nrow(z)
  p = ncol(z)
  statmat.pearson = matrix(0,p,p)
  statmat.dcov = matrix(0,p,p)
